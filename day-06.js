@@ -1,6 +1,9 @@
-//
-//
-
+//Maximum Multiple
+//https://www.codewars.com/kata/maximum-multiple/train/javascript
+function maxMultiple(divisor, bound) {
+    const n = Math.floor(bound / divisor);
+    return n * divisor
+}
 //Is he gonna survive?
 //https://www.codewars.com/kata/is-he-gonna-survive/train/javascript
 function hero(bullets, dragons) {
