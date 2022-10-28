@@ -38,3 +38,15 @@ function colorOf(r,g,b){
   }
   return '#' + rStrIf + gStrIf + bStrIf
 }
+//Methods of Number object--toFixed(), toExponential() and toPrecision()
+//http://www.codewars.com/kata/57256064856584bc47000611
+function howManySmaller(arr, n) {
+    let newArr = [];
+    for (const i of arr) {
+        if (i.toFixed(2) < n) {
+            newArr.push(i.toFixed(2));
+        }
+    }
+    return newArr.length
+}
+
