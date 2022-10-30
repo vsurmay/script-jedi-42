@@ -11,3 +11,9 @@ function alienLanguage(str) {
   }
   return result.join(" ");
 }
+//#21: Methods of String object--trim() and the string template
+//http://www.codewars.com/kata/5729b103dd8bac11a900119e
+function fiveLine(s){
+  const t = s.trim();
+  return `${t}\n${t.repeat(2)}\n${t.repeat(3)}\n${t.repeat(4)}\n${t.repeat(5)}`
+}
