@@ -15,5 +15,5 @@ function alienLanguage(str) {
 //http://www.codewars.com/kata/5729b103dd8bac11a900119e
 function fiveLine(s){
   const t = s.trim();
-  return `${t}\n${t.repeat(2)}\n${t.repeat(3)}\n${t.repeat(4)}\n${t.repeat(5)}`
+  return `${t}\n${t.repeat(2)}\n${t.repeat(3)}\n${t.repeat(4)}\n${t.repeat(5)}`;
 }
