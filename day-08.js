@@ -17,36 +17,36 @@ function whatNumberIsIt(n){
 }
 //Methods of Number object--toString() and toLocaleString()
 //https://www.codewars.com/kata/57238ceaef9008adc7000603
-function colorOf(r,g,b){
+function colorOf(r, g, b) {
   let rStrIf;
   let gStrIf;
   let bStrIf;
   if (r.toString(16).length < 2) {
-    rStrIf = '0' + r.toString(16)
+    rStrIf = "0" + r.toString(16);
   } else {
-     rStrIf = r.toString(16);
+    rStrIf = r.toString(16);
   }
   if (g.toString(16).length < 2) {
-    gStrIf = '0' + g.toString(16);
+    gStrIf = "0" + g.toString(16);
   } else {
-     gStrIf = g.toString(16);
+    gStrIf = g.toString(16);
   }
   if (b.toString(16).length < 2) {
-    bStrIf = '0' + b.toString(16);
+    bStrIf = "0" + b.toString(16);
   } else {
-     bStrIf = b.toString(16);
+    bStrIf = b.toString(16);
   }
-  return '#' + rStrIf + gStrIf + bStrIf;
+  return "#" + rStrIf + gStrIf + bStrIf;
 }
+
 //Methods of Number object--toFixed(), toExponential() and toPrecision()
 //http://www.codewars.com/kata/57256064856584bc47000611
 function howManySmaller(arr, n) {
   let newArr = [];
   for (const i of arr) {
-      if (i.toFixed(2) < n) {
-          newArr.push(i.toFixed(2));
-      }
+    if (i.toFixed(2) < n) {
+      newArr.push(i.toFixed(2));
+    }
   }
   return newArr.length;
 }
-
