@@ -27,3 +27,13 @@ function firstToLast(str, c) {
     return last - first;
   }
 }
+//#18: Methods of String object--concat() split() and its good friend join()"
+//http://www.codewars.com/kata/57280481e8118511f7000ffa
+function splitAndMerge(string, separator) {
+  const strSplit = string.split(" ");
+  const result = [];
+  for (let i = 0; i < strSplit.length; i++) {
+    result.push(strSplit[i].split("").join(separator));
+  }
+  return result.join(" ");
+}
