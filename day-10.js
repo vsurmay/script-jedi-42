@@ -14,7 +14,7 @@ function alienLanguage(str) {
 //[JEDI LEVEL] #20: Methods of String object--charAt() charCodeAt() and fromCharCode()
 //http://www.codewars.com/kata/57284d23e81185ae6200162a
 function topSecret(str) {
-  let s = str.split("");
+  const s = str.split("");
   for (let i = 0; i < s.length; i++) {
     s[i] = String.fromCharCode(s[i].charCodeAt() - 3);
     let k = s[i].charCodeAt();
