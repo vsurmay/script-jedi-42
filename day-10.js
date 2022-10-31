@@ -11,6 +11,31 @@ function alienLanguage(str) {
   }
   return result.join(" ");
 }
+//[JEDI LEVEL] #20: Methods of String object--charAt() charCodeAt() and fromCharCode()
+//http://www.codewars.com/kata/57284d23e81185ae6200162a
+function topSecret(str) {
+  let s = str.split("");
+  for (let i = 0; i < s.length; i++) {
+    s[i] = String.fromCharCode(s[i].charCodeAt() - 3);
+    let k = s[i].charCodeAt();
+    if ((k < 97 && k > 90) || (k < 65 && k > 58)) {
+      s[i] = String.fromCharCode(k + 26);
+    }
+    if (k < 57) {
+      s[i] = String.fromCharCode(k + 3);
+    }
+  }
+  return s.join("");
+}
+
+//question1: The top secret file number is...
+answer1 = "3125";
+//question2: Super agent's name is...
+answer2 = "iMWlXm";
+//question3: He stole the treasure is...
+answer3 = "Toilet paper";
+
+
 //#21: Methods of String object--trim() and the string template
 //http://www.codewars.com/kata/5729b103dd8bac11a900119e
 function fiveLine(s){
