@@ -20,9 +20,6 @@ function notEqual(s1, s2) {
 //[JEDI LEVEL] Operations with Sets
 //https://www.codewars.com/kata/5609fd5b44e602b2ff00003a/train/javascript
 function process2Arrays(arr1, arr2) {
-  const lengthArr1 = arr1.length;
-  const lengthArr2 = arr2.length;
-  const sumLengthArr = lengthArr1 + lengthArr2;
   const setArray = new Set();
   for (const i of arr1) {
     setArray.add(i);
@@ -30,15 +27,11 @@ function process2Arrays(arr1, arr2) {
   for (const i of arr2) {
     setArray.add(i);
   }
-  const sizeSetArray = setArray.size;
-  const repeatSymbol = sumLengthArr - sizeSetArray;
-  const unrepeatableSymbol = sizeSetArray - repeatSymbol;
-  const unrepeatableSymbolArr1 = lengthArr1 - repeatSymbol;
-  const unrepeatableSymbolArr2 = lengthArr2 - repeatSymbol;
+  const repeatSymbol = arr1.length + arr2.length - setArray.size;
   return [
     repeatSymbol,
-    unrepeatableSymbol,
-    unrepeatableSymbolArr1,
-    unrepeatableSymbolArr2,
+    setArray.size - repeatSymbol,
+    arr1.length - repeatSymbol,
+    arr2.length - repeatSymbol,
   ];
 }
