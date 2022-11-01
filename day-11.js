@@ -15,16 +15,5 @@ function areEqual(s1, s2) {
 }
 
 function notEqual(s1, s2) {
-  if (s1.size !== s2.size) return true;
-  const result = new Set();
-  for (const i of s1) {
-    result.add(i);
-  }
-  for (const i of s2) {
-    result.add(i);
-  }
-  if (result.size === s1.size && result.size === s2.size) {
-    return false;
-  } else return true;
+  return !areEqual(s1, s2);
 }
-
