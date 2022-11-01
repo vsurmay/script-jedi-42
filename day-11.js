@@ -11,7 +11,9 @@ function areEqual(s1, s2) {
   }
   if (result.size === s1.size && result.size === s2.size) {
     return true;
-  } else return false;
+  } else {
+    return false;
+  }
 }
 
 function notEqual(s1, s2) {
