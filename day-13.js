@@ -13,25 +13,27 @@ function match(candidate, job) {
 //Job Matching #2
 //https://www.codewars.com/kata/56c2578be8b139bd5c001bd8
 function match(job, candidates) {
-  const match = [];
-  let equity = false;
-  if (job.equityMax > 0) {
-    equity = true;
-  }
-  for (let candidate of candidates) {
-    if (
-      (candidate.desiresEquity === true && equity) ||
-      candidate.desiresEquity === false
-    ) {
-      let candidate_cities = [candidate.currentLocation];
-      candidate_cities = candidate_cities.concat(candidate.desiredLocations);
-      for (let location of job.locations) {
-        if (candidate_cities.includes(location)) {
-          match.push(candidate);
+  let matches = [];
+  for (let candidate in candidates) {
+    if (job.equityMax >= candidates[candidate].desiresEquity) {
+    } else {
+      continue;
+    }
+    if (job.locations.includes(candidates[candidate].currentLocation)) {
+      matches.push(candidates[candidate]);
+      continue;
+    } else {
+      for (let element in candidates[candidate].desiredLocations) {
+        if (
+          job.locations.includes(
+            candidates[candidate].desiredLocations[element]
+          )
+        ) {
+          matches.push(candidates[candidate]);
           break;
         }
       }
     }
   }
-  return match;
+  return matches;
 }
