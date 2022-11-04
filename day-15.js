@@ -8,28 +8,19 @@ function shuffleIt(arr, ...arrays) {
   }
   return arr;
 }
-//Job Matching #2
-//https://www.codewars.com/kata/56c2578be8b139bd5c001bd8
-function match(job, candidates) {
-  const match = [];
-  let equity = false;
-  if (job.equityMax > 0) {
-    equity = true;
-  }
-  for (let candidate of candidates) {
-    if (
-      (candidate.desiresEquity === true && equity) ||
-      candidate.desiresEquity === false
-    ) {
-      let candidate_cities = [candidate.currentLocation];
-      candidate_cities = candidate_cities.concat(candidate.desiredLocations);
-      for (let location of job.locations) {
-        if (candidate_cities.includes(location)) {
-          match.push(candidate);
-          break;
-        }
-      }
+//loopArray
+//https://www.codewars.com/kata/5fd8aa5743b49e0012d43e50/
+function loopArr(arr, direction, steps) {
+  const arrays = arr;
+  if (direction === "right") {
+    for (let i = 0; i < steps; i++) {
+      arrays.unshift(arrays.pop());
     }
+    return arrays;
+  } else {
+    for (let i = 0; i < steps; i++) {
+      arrays.push(arrays.shift());
+    }
+    return arrays;
   }
-  return match;
 }
