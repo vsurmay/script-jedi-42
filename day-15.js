@@ -24,3 +24,22 @@ function loopArr(arr, direction, steps) {
     return arrays;
   }
 }
+//[JEDI LEVEL] #23: methods of arrayObject---push(), pop(), shift() and unshift()
+//http://www.codewars.com/kata/572af273a3af3836660014a1
+function infiniteLoop(arr, d, n) {
+  if (d === "left") {
+    for (let i = 0; i < n; i++) {
+      arr[2].push(arr[0].shift());
+      arr[0].push(arr[1].shift());
+      arr[1].push(arr[2].shift());
+    }
+    return arr;
+  } else {
+    for (let i = 0; i < n; i++) {
+      arr[0].unshift(arr[2].pop());
+      arr[1].unshift(arr[0].pop());
+      arr[2].unshift(arr[1].pop());
+    }
+    return arr;
+  }
+}
