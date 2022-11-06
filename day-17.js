@@ -28,7 +28,6 @@ function countGrade(scores) {
 //#29: methods of arrayObject---concat() and join()
 //http://www.codewars.com/kata/5731861d05d14d6f50000626
 function bigToSmall(arr) {
-  const newArr = [].concat(...arr);
-  newArr.sort((a, b) => b - a);
+  const newArr = [].concat(...arr).sort((a, b) => b - a);
   return newArr.join(">");
 }
