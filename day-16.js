@@ -35,8 +35,8 @@ function sortIt(arr) {
 //#26: methods of arrayObject---map()
 //http://www.codewars.com/kata/572fdeb4380bb703fc00002c
 function isolateIt(arr) {
-  let result = arr.map((item) => {
-    let n = Math.floor(item.length / 2);
+  const result = arr.map((item) => {
+    const n = Math.floor(item.length / 2);
     if (item.length % 2) {
       const itemArr = item.split("");
       itemArr.splice(n, 1, "|");
