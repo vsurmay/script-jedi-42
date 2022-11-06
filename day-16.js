@@ -40,13 +40,11 @@ function isolateIt(arr) {
     if (item.length % 2) {
       const itemArr = item.split("");
       itemArr.splice(n, 1, "|");
-      itemStr = itemArr.join("");
-      return itemStr;
+      return itemArr.join("");
     } else {
       const itemArr = item.split("");
       itemArr.splice(n, 0, "|");
-      itemStr = itemArr.join("");
-      return itemStr;
+      return itemArr.join("");
     }
   });
   return result;
