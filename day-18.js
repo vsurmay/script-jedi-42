@@ -26,3 +26,13 @@ for (let i = 0; i < arrFistLast.length; i++) {
 const result = newArr.reduce((a, b) => a * b);
 return result;
 }
+//#31: methods of arrayObject---isArray() indexOf() and toString()
+//http://www.codewars.com/kata/5732b0351eb838d03300101d
+function blackAndWhite(arr) {
+  if (!Array.isArray(arr)) return "It's a fake array";
+  const result =
+    arr.includes(5) && arr.includes(13)
+      ? "It's a black array"
+      : "It's a white array";
+  return result;
+}
