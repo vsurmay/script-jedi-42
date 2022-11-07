@@ -36,3 +36,21 @@ function blackAndWhite(arr) {
       : "It's a white array";
   return result;
 }
+//[JEDI LEVEL] #36 methods of Math -- random()
+//https://www.codewars.com/kata/5735956413c2054a680009ec
+function rndCode() {
+  const result = [];
+  const letter = "ABCDEFGHIJKLM";
+  for (let i = 0; i < 2; i++) {
+    result.push(letter[~~(letter.length * Math.random())]);
+  }
+  const number = "1234567890";
+  for (let i = 0; i < 4; i++) {
+    result.push(number[~~(number.length * Math.random())]);
+  }
+  const sumvols = "~!@#$%^&*";
+  for (let i = 0; i < 2; i++) {
+    result.push(sumvols[~~(sumvols.length * Math.random())]);
+  }
+  return result.join("");
+}
