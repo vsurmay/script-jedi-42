@@ -13,3 +13,9 @@ function isSantaClausable(obj) {
 }
 //
 //
+
+//Call function using apply
+//http://www.codewars.com/kata/write-javascripts-call-function-using-apply
+Function.prototype.call = function(context, ...args) {
+	return this.apply(context, args);
+}
