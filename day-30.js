@@ -11,8 +11,19 @@ function isSantaClausable(obj) {
     return false;
   }
 }
-//
-//
+
+//Cylon Evolution
+//http://www.codewars.com/kata/cylon-evolution
+function Cylon(model){
+   this.model = model;
+}
+Cylon.prototype.attack = () => "Destroy all humans!";
+function HumanSkin(model){
+   this.model = model;
+}
+HumanSkin.prototype = Cylon.prototype;
+HumanSkin.prototype.constructor = HumanSkin;
+HumanSkin.prototype.infiltrate = () => "Infiltrate the colonies";
 
 //Call function using apply
 //http://www.codewars.com/kata/write-javascripts-call-function-using-apply
