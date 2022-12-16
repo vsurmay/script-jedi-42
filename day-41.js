@@ -10,12 +10,8 @@ function launchAll(launchMissile) {
 //[JEDI LEVEL] The Supermarket Queue
 //https://www.codewars.com/kata/57b06f90e298a7b53d000a86/train/javascript
 function queueTime(customers, n) {
-  if (customers.length == 0) {
-    return 0;
-  }
-  if (n > customers.length) {
-    return Math.max(...customers);
-  }
+  if (customers.length == 0) return 0;
+  if (n > customers.length) return Math.max(...customers);
   const multiArr = [];
   for (let i = 0; i < n; i++) {
     multiArr.push(customers[i]);
