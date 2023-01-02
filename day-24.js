@@ -9,6 +9,7 @@ function solution(...arg) {
 
 //[JEDI LEVEL] Last Argument
 //http://www.codewars.com/kata/last
+
 function last(...list) {
   const result = list[list.length - 1];
   if (Array.isArray(result)) {
